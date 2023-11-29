@@ -16,12 +16,21 @@ import Header from "@/components/Header.vue";
       alt=""
     />
     <div
-      class="z-10 absolute mx-auto right-0 left-0 top-[650px] text-4xl flex justify-center text-white"
+      class="z-10 absolute mx-auto right-0 left-0 top-[650px] text-4xl flex justify-center gap-x-4 text-white"
     >
-      <button></button>
-      <button></button>
+      <button
+        class="h-14 w-56 text-sm text-black font-medium rounded-full bg-[#E5C140]"
+      >
+        ПОЧАТИ
+      </button>
+      <button class="h-14 w-56 text-sm font-medium rounded-full border">
+        ДЕТАЛЬНIШЕ
+      </button>
     </div>
     dsa
+  </div>
+  <div>
+    <img src="" alt="" />
   </div>
 </template>
 
