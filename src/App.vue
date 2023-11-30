@@ -5,7 +5,7 @@ import Header from "@/components/Header.vue";
 <template>
   <Header />
   <!-- Hero Section -->
-  <div class="bg-primary">
+  <div class="px-4 md:px-0 bg-primary">
     <div id="hero" class="h-[760px] relative bg-primary mt-[100px]">
       <img
         class="z-[2] absolute mx-auto -top-6 right-0 left-3"
@@ -122,7 +122,9 @@ import Header from "@/components/Header.vue";
       </div>
 
       <div class="grid grid-flow-row grid-rows-3 gap-y-16">
-        <div class="flex justify-center gap-x-11">
+        <div
+          class="flex flex-col md:flex-row md:justify-center items-center md:gap-x-11 gap-y-11"
+        >
           <div class="pricing_card">
             <div class="heading">ТРЕНУВАННЯ ВДОМА</div>
             <div class="wrapper">
@@ -140,7 +142,9 @@ import Header from "@/components/Header.vue";
             </div>
           </div>
         </div>
-        <div class="flex justify-center gap-x-11">
+        <div
+          class="flex flex-col md:flex-row md:justify-center items-center md:gap-x-11 gap-y-11"
+        >
           <div class="pricing_card">
             <div class="heading">ПЛАН ХАРЧУВАННЯ</div>
             <div class="wrapper">
@@ -184,7 +188,9 @@ import Header from "@/components/Header.vue";
         <div class="text-[50px]">ВІДГУКИ</div>
         <div class="text-[13px]">ТА РЕЗУЛЬТАТИ КЛІЄНТІВ</div>
       </div>
-      <div class="mx-auto max-w-7xl flex justify-between gap-x-11">
+      <div
+        class="mx-auto max-w-7xl flex flex-col md:flex-row items-center md:justify-between gap-x-11 gap-y-20"
+      >
         <div class="story">
           <div class="img">
             <img src="/story_1.png" alt="" />
@@ -212,9 +218,11 @@ import Header from "@/components/Header.vue";
         </div>
       </div>
     </div>
-    <div class="mb-28 flex mx-auto max-w-7xl gap-x-11">
-      <img class="w-1/2" src="/story_1_1.png" alt="" />
-      <img class="w-1/2" src="/story_2_1.png" alt="" />
+    <div
+      class="mb-28 flex flex-col md:flex-row items-center mx-auto max-w-7xl gap-11"
+    >
+      <img class="w-[45%]" src="/story_1_1.png" alt="" />
+      <img class="w-[45%]" src="/story_2_1.png" alt="" />
     </div>
     <div class="mb-7 text-xl text-white text-center">
       МИ ПРОДУМАЛИ все до дрібних ДЕТАЛЕЙ, щоб ваші ЗАЙНЯТТЯ приносили не тільки
@@ -275,7 +283,7 @@ import Header from "@/components/Header.vue";
 }
 #stories {
   .story {
-    @apply w-1/2 px-9  rounded-[40px];
+    @apply w-full md:w-1/2 px-9  rounded-[40px];
     @apply text-white bg-[#24262A];
     > .img {
       @apply mb-20 relative;
