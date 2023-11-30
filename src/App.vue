@@ -1,11 +1,13 @@
 <script setup>
 import Header from "@/components/Header.vue";
+import { Carousel, Slide, Pagination, Navigation } from "vue3-carousel";
 </script>
 
 <template>
   <Header />
-  <!-- Hero Section -->
   <div class="px-4 md:px-0 bg-primary">
+    <!-- . -->
+    <!-- Hero Section -->
     <div id="hero" class="h-[760px] relative bg-primary mt-[100px]">
       <img
         class="z-[2] absolute mx-auto -top-6 right-0 left-3"
@@ -55,7 +57,84 @@ import Header from "@/components/Header.vue";
         <br />
         ТА ЗДОРОВОГО ХАРЧУВАННЯ НА ЖИТТЯ ЛЮДИНИ
       </div>
-      <div class="pt-40 mx-auto max-w-7xl">
+      <div class="block md:hidden">
+        <Carousel
+          class="w-[1200px] h-[500px] relative"
+          :items-to-show="2"
+          :wrapAround="true"
+        >
+          <template #slides>
+            <Slide v-for="slide in 10" :key="slide">
+              <div class="carousel__item">{{ slide }}</div>
+            </Slide>
+
+            <!-- <slide :key="1">
+              <div class="benifit">
+                <div class="relative h-[50%] w-full mb-4">
+                  <img src="/benifit_1.png" alt="" />
+                </div>
+                <div class="title">ГАРНА ФІЗИЧНА ФОРМА</div>
+                <div class="desc">
+                  фізична активність і гарна форма сприяють кращому збереженню
+                  енергії, покращенню когнітивних функцій і підвищенню
+                  продуктивності у різних сферах життя.
+                </div>
+                <img
+                  class="mix-blend-difference"
+                  src="/logo.png"
+                  width="60"
+                  alt=""
+                />
+              </div>
+            </slide>
+            <Slide :key="2">
+              <div class="benifit">
+                <div class="relative h-[50%] w-full mb-4">
+                  <img src="/benifit_2.png" alt="" />
+                </div>
+                <div class="title">РІВЕНЬ ЩАСТЯ</div>
+                <div class="desc">
+                  Спорт підвищує рівень ендорфінів в організмі, що робить людину
+                  щасливішою, підвищує якість запам'ятовування, дозволяє більш
+                  структурно планувати та ефективно вирішувати проблеми.
+                </div>
+                <img
+                  class="mix-blend-difference"
+                  src="/logo.png"
+                  width="60"
+                  alt=""
+                />
+              </div>
+            </Slide>
+            <Slide :key="3">
+              <div class="benifit">
+                <div class="relative h-[50%] w-full mb-4">
+                  <img src="/benifit_3.png" alt="" />
+                </div>
+                <div class="title">ЗДОРОВЕ ХАРЧУВАННЯ</div>
+                <div class="desc">
+                  Їжа дає енергію та будівельні матеріали кожній клітині нашого
+                  тіла. Якщо організм не отримує достатньої кількості корисних
+                  поживних речовин, обмінні процеси порушуються і страждає наше
+                  здоров'я.
+                </div>
+                <img
+                  class="mix-blend-difference"
+                  src="/logo.png"
+                  width="60"
+                  alt=""
+                />
+              </div>
+            </Slide> -->
+          </template>
+
+          <template #addons>
+            <navigation />
+            <pagination />
+          </template>
+        </Carousel>
+      </div>
+      <div class="hidden md:block pt-40 mx-auto max-w-7xl">
         <div id="benifits" class="flex justify-center gap-x-9">
           <div class="benifit">
             <div class="relative h-[50%] w-full mb-4">
@@ -237,6 +316,26 @@ import Header from "@/components/Header.vue";
 </template>
 
 <style lang="postcss" scoped>
+.carousel__item {
+  min-height: 200px;
+  width: 100%;
+  background-color: var(--vc-clr-primary);
+  color: var(--vc-clr-white);
+  font-size: 20px;
+  border-radius: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.carousel__slide {
+  padding: 10px;
+}
+
+.carousel__prev,
+.carousel__next {
+  box-sizing: content-box;
+  border: 5px solid white;
+}
 #benifits {
   .benifit {
     @apply h-[380px] w-1/3 px-6 relative rounded-[44px] bg-white flex flex-col items-center;
