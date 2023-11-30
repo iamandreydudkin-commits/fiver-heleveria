@@ -175,16 +175,58 @@ import Header from "@/components/Header.vue";
         </div>
       </div>
     </div>
+
+    <!-- user stories -->
+    <div id="stories" class="mb-12 pt-60">
+      <div class="mb-20 text-white font-medium text-center">
+        <div class="text-[50px]">ВІДГУКИ</div>
+        <div class="text-[13px]">ТА РЕЗУЛЬТАТИ КЛІЄНТІВ</div>
+      </div>
+      <div class="mx-auto max-w-7xl flex justify-between gap-x-11">
+        <div class="story">
+          <div class="img">
+            <img src="/story_1.png" alt="" />
+          </div>
+          <div class="desc">
+            Максим привіт) Хотіла написати відгук про тренування з тобою.
+            Тренуємося ми вже 3,5 місяці, і я скажу що різниця з тим, як я
+            тренувалася раніше з іншими тренерами колосальна. За перший місяць –
+            3 кг 🔥 + форма дуже покращала! І нарешті я змогла відмовитися від
+            СОЛОДКОГО! Короче все вогонь) Дякую!
+          </div>
+          <div class="username">Юлія</div>
+        </div>
+        <div class="story">
+          <div class="img">
+            <img src="/story_2.png" alt="" />
+          </div>
+          <div class="desc">
+            Можу сказати, що точно форма змінилася на краще: скинув зайвий жир,
+            промалював груди, руки, спину; виправив техніку на краще. Тренування
+            були різноманітними. Ну і зв'язок з тобою 24/7, що також дуже
+            допомагало і в моральному плані, і в плані виконання вправ
+          </div>
+          <div class="username">Данило</div>
+        </div>
+      </div>
+    </div>
+    <div class="mb-28 flex mx-auto max-w-7xl gap-x-11">
+      <img class="w-1/2" src="/story_1_1.png" alt="" />
+      <img class="w-1/2" src="/story_2_1.png" alt="" />
+    </div>
+    <div class="mb-7 text-xl text-white text-center">
+      МИ ПРОДУМАЛИ все до дрібних ДЕТАЛЕЙ, щоб ваші ЗАЙНЯТТЯ приносили не тільки
+      результат, але й задоволення
+    </div>
+    <button
+      class="mb-44 block w-[340px] mx-auto h-12 bg-white text-black rounded-full"
+    >
+      стати клієнтом</button
+    >.
   </div>
 </template>
 
 <style lang="postcss" scoped>
-/* #hero {
-  background-image: url("/hero_bg.png");
-  background-size: fit;
-  background-repeat: no-repeat;
-  background-position: center;
-} */
 #benifits {
   .benifit {
     @apply h-[380px] w-1/3 px-6 relative rounded-[44px] bg-white flex flex-col items-center;
@@ -228,5 +270,23 @@ import Header from "@/components/Header.vue";
     #ffffff 65%,
     #18191c 50%
   );
+}
+#stories {
+  .story {
+    @apply w-1/2 px-9  rounded-[40px];
+    @apply text-white bg-[#24262A];
+    > .img {
+      @apply mb-20 relative;
+      > img {
+        @apply absolute -bottom-[50px] left-0 right-0 mx-auto rounded-full;
+      }
+    }
+    > .desc {
+      @apply mb-11 text-[13px] font-[300];
+    }
+    > .username {
+      @apply text-center mb-3 text-[13px] font-[300];
+    }
+  }
 }
 </style>
