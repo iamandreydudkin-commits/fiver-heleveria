@@ -52,34 +52,44 @@ import Header from "@/components/Header.vue";
       <br />
       ТА ЗДОРОВОГО ХАРЧУВАННЯ НА ЖИТТЯ ЛЮДИНИ
     </div>
-    <div class="pt-20 mx-auto max-w-7xl">
+    <div class="pt-40 mx-auto max-w-7xl">
       <div id="stories" class="flex justify-center gap-x-9">
         <div class="story">
-          <img src="/story_1.png" alt="" />
+          <div class="relative h-[50%] w-full mb-4">
+            <img src="/story_1.png" alt="" />
+          </div>
           <div class="title">ГАРНА ФІЗИЧНА ФОРМА</div>
           <div class="desc">
             фізична активність і гарна форма сприяють кращому збереженню
             енергії, покращенню когнітивних функцій і підвищенню продуктивності
             у різних сферах життя.
           </div>
+          <img class="mix-blend-difference" src="/logo.png" width="60" alt="" />
+        </div>
+
+        <div class="story">
+          <div class="relative h-[50%] w-full mb-4">
+            <img src="/story_2.png" alt="" />
+          </div>
+          <div class="title">РІВЕНЬ ЩАСТЯ</div>
+          <div class="desc">
+            Спорт підвищує рівень ендорфінів в організмі, що робить людину
+            щасливішою, підвищує якість запам'ятовування, дозволяє більш
+            структурно планувати та ефективно вирішувати проблеми.
+          </div>
+          <img class="mix-blend-difference" src="/logo.png" width="60" alt="" />
         </div>
         <div class="story">
-          <img src="" alt="" />
-          <div class="title">ГАРНА ФІЗИЧНА ФОРМА</div>
-          <div class="desc">
-            фізична активність і гарна форма сприяють кращому збереженню
-            енергії, покращенню когнітивних функцій і підвищенню продуктивності
-            у різних сферах життя.
+          <div class="relative h-[50%] w-full mb-4">
+            <img src="/story_3.png" alt="" />
           </div>
-        </div>
-        <div class="story">
-          <img src="" alt="" />
-          <div class="title">ГАРНА ФІЗИЧНА ФОРМА</div>
+          <div class="title">ЗДОРОВЕ ХАРЧУВАННЯ</div>
           <div class="desc">
-            фізична активність і гарна форма сприяють кращому збереженню
-            енергії, покращенню когнітивних функцій і підвищенню продуктивності
-            у різних сферах життя.
+            Їжа дає енергію та будівельні матеріали кожній клітині нашого тіла.
+            Якщо організм не отримує достатньої кількості корисних поживних
+            речовин, обмінні процеси порушуються і страждає наше здоров'я.
           </div>
+          <img class="mix-blend-difference" src="/logo.png" width="60" alt="" />
         </div>
       </div>
     </div>
@@ -95,12 +105,13 @@ import Header from "@/components/Header.vue";
 } */
 #stories {
   .story {
-    @apply h-[380px] w-1/3 relative rounded-[44px] bg-white flex flex-col items-center;
+    @apply h-[380px] w-1/3 px-6 relative rounded-[44px] bg-white flex flex-col items-center;
+
     img {
-      /* @apply absolute bottom-0; */
+      @apply absolute bottom-0 left-0 right-0 mx-auto;
     }
     .title {
-      @apply text-[#18191C] text-xl  font-bold;
+      @apply text-[#18191C] mb-2 text-xl  font-bold;
     }
     .desc {
       @apply text-[#18191C] text-sm;
