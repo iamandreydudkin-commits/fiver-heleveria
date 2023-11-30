@@ -45,7 +45,7 @@ import Header from "@/components/Header.vue";
       </div>
     </div>
 
-    <!-- user stories -->
+    <!-- benifits -->
     <div class="text-4xl bg-primary pt-28">
       <div class="mb-9 text-white font-medium text-center">
         ВПЛИВ
@@ -54,10 +54,10 @@ import Header from "@/components/Header.vue";
         ТА ЗДОРОВОГО ХАРЧУВАННЯ НА ЖИТТЯ ЛЮДИНИ
       </div>
       <div class="pt-40 mx-auto max-w-7xl">
-        <div id="stories" class="flex justify-center gap-x-9">
-          <div class="story">
+        <div id="benifits" class="flex justify-center gap-x-9">
+          <div class="benifit">
             <div class="relative h-[50%] w-full mb-4">
-              <img src="/story_1.png" alt="" />
+              <img src="/benifit_1.png" alt="" />
             </div>
             <div class="title">ГАРНА ФІЗИЧНА ФОРМА</div>
             <div class="desc">
@@ -73,9 +73,9 @@ import Header from "@/components/Header.vue";
             />
           </div>
 
-          <div class="story">
+          <div class="benifit">
             <div class="relative h-[50%] w-full mb-4">
-              <img src="/story_2.png" alt="" />
+              <img src="/benifit_2.png" alt="" />
             </div>
             <div class="title">РІВЕНЬ ЩАСТЯ</div>
             <div class="desc">
@@ -90,9 +90,9 @@ import Header from "@/components/Header.vue";
               alt=""
             />
           </div>
-          <div class="story">
+          <div class="benifit">
             <div class="relative h-[50%] w-full mb-4">
-              <img src="/story_3.png" alt="" />
+              <img src="/benifit_3.png" alt="" />
             </div>
             <div class="title">ЗДОРОВЕ ХАРЧУВАННЯ</div>
             <div class="desc">
@@ -185,8 +185,8 @@ import Header from "@/components/Header.vue";
   background-repeat: no-repeat;
   background-position: center;
 } */
-#stories {
-  .story {
+#benifits {
+  .benifit {
     @apply h-[380px] w-1/3 px-6 relative rounded-[44px] bg-white flex flex-col items-center;
 
     img {
