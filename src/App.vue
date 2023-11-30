@@ -31,12 +31,14 @@ import Header from "@/components/Header.vue";
       </div>
       dsa
     </div>
-    <div class="pt-[350px] flex justify-center relative bg-primary">
-      <div class="absolute right-0 top-0 bg-primary">
-        <img class="mix-blend-screen" src="/hero_bottom.png" alt="" />
-      </div>
+    <div
+      class="relative max-w-7xl mx-auto pt-[350px] flex flex-col justify-center bg-primary"
+    >
+      <img class="mix-blend-screen" src="/hero_bottom.png" alt="" />
+      <!-- <div class="absolute right-0 top-0 bg-primary">
+      </div> -->
       <div class="">
-        <ul class="text-[#E0E0E0] list-disc">
+        <ul class="text-[#E0E0E0] text-xl list-disc flex flex-col gap-y-6">
           <li>СПОРТИВНИЙ БЛОГ В Tiktok ТА instagram</li>
           <li>БЛИЗЬКО 6 РОКIВ У СПОРТI</li>
           <li>КВАЛIФIКАЦIЯ ТРЕНЕРА ТА ДIЄТОЛОГА</li>
