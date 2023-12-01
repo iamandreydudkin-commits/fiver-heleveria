@@ -1,5 +1,6 @@
 <script setup>
 import Header from "@/components/Header.vue";
+import "vue3-carousel/dist/carousel.css";
 import { Carousel, Slide, Pagination, Navigation } from "vue3-carousel";
 </script>
 
@@ -8,7 +9,11 @@ import { Carousel, Slide, Pagination, Navigation } from "vue3-carousel";
   <div class="px-4 md:px-0 bg-primary">
     <!-- . -->
     <!-- Hero Section -->
-    <div id="hero" class="h-[760px] relative bg-primary mt-[100px]">
+    <!-- hero desktop -->
+    <div
+      id="hero"
+      class="hidden md:block h-[760px] relative bg-primary mt-[100px]"
+    >
       <img
         class="z-[2] absolute mx-auto -top-6 right-0 left-3"
         src="/hero.png"
@@ -31,16 +36,31 @@ import { Carousel, Slide, Pagination, Navigation } from "vue3-carousel";
           ДЕТАЛЬНIШЕ
         </button>
       </div>
-      dsa
+    </div>
+    <!-- hero mobile -->
+    <div class="block md:hidden mt-[100px]">
+      <div class="w-full h-[calc(100vh_/_1.9)]">
+        <img class="mx-auto h-full" src="/mobile_hero.png" alt="" />
+      </div>
+      <div
+        class="text-4xl flex flex-col items-center justify-center gap-4 text-white"
+      >
+        <button
+          class="h-14 w-56 text-sm text-black font-medium rounded-full bg-[#E5C140]"
+        >
+          ПОЧАТИ
+        </button>
+        <button class="h-14 w-56 text-sm font-medium rounded-full border">
+          ДЕТАЛЬНIШЕ
+        </button>
+      </div>
     </div>
     <div
-      class="relative max-w-7xl mx-auto pt-[350px] flex flex-col justify-center bg-primary"
+      class="max-w-7xl mx-auto pt-10 flex flex-col justify-center bg-primary"
     >
       <img class="mix-blend-screen" src="/hero_bottom.png" alt="" />
-      <!-- <div class="absolute right-0 top-0 bg-primary">
-      </div> -->
       <div class="">
-        <ul class="text-[#E0E0E0] text-xl list-disc flex flex-col gap-y-6">
+        <ul class="text-[#E0E0E0] ml-4 text-xl list-disc flex flex-col gap-y-6">
           <li>СПОРТИВНИЙ БЛОГ В Tiktok ТА instagram</li>
           <li>БЛИЗЬКО 6 РОКIВ У СПОРТI</li>
           <li>КВАЛIФIКАЦIЯ ТРЕНЕРА ТА ДIЄТОЛОГА</li>
@@ -57,18 +77,11 @@ import { Carousel, Slide, Pagination, Navigation } from "vue3-carousel";
         <br />
         ТА ЗДОРОВОГО ХАРЧУВАННЯ НА ЖИТТЯ ЛЮДИНИ
       </div>
-      <div class="block md:hidden">
-        <Carousel
-          class="w-[1200px] h-[500px] relative"
-          :items-to-show="2"
-          :wrapAround="true"
-        >
+      <!-- mobile slider -->
+      <div class="block pt-20 md:hidden">
+        <Carousel :items-to-show="1" :wrapAround="true">
           <template #slides>
-            <Slide v-for="slide in 10" :key="slide">
-              <div class="carousel__item">{{ slide }}</div>
-            </Slide>
-
-            <!-- <slide :key="1">
+            <slide :key="1">
               <div class="benifit">
                 <div class="relative h-[50%] w-full mb-4">
                   <img src="/benifit_1.png" alt="" />
@@ -125,15 +138,15 @@ import { Carousel, Slide, Pagination, Navigation } from "vue3-carousel";
                   alt=""
                 />
               </div>
-            </Slide> -->
+            </Slide>
           </template>
 
           <template #addons>
-            <navigation />
             <pagination />
           </template>
         </Carousel>
       </div>
+      <!-- desktop version -->
       <div class="hidden md:block pt-40 mx-auto max-w-7xl">
         <div id="benifits" class="flex justify-center gap-x-9">
           <div class="benifit">
@@ -242,19 +255,25 @@ import { Carousel, Slide, Pagination, Navigation } from "vue3-carousel";
           </div>
         </div>
         <div
-          class="mx-auto w-[395px] h-[363px] text-center rounded-[44px] bg-[#E5C140] p-6"
+          class="mx-auto w-[238px] h-[180px] md:w-[395px] md:h-[363px] text-center rounded-[44px] bg-[#E5C140] p-3 md:p-6"
         >
-          <div class="mb-2 text-xl font-medium">ПЕРШЕ ТРЕНУВАННЯ</div>
-          <div class="mb-6 text-[40px] font-medium">БЕЗКОШТОВНЕ</div>
+          <div class="md:mb-2 text-[10px] md:text-xl font-medium">
+            ПЕРШЕ ТРЕНУВАННЯ
+          </div>
+          <div class="md:mb-2 text-[25px] md:text-[40px] font-medium">
+            БЕЗКОШТОВНЕ
+          </div>
           <input
-            class="mb-3 w-full bg-[#24262A4D] rounded-full h-10"
+            class="mb-1 md:mb-3 w-full bg-[#24262A4D] rounded-full h-6 md:h-10"
             type="text"
           />
           <input
-            class="mb-8 w-full bg-[#24262A4D] rounded-full h-10"
+            class="mb-4 md:mb-8 w-full bg-[#24262A4D] rounded-full h-6 md:h-10"
             type="text"
           />
-          <button class="w-full h-14 text-white bg-[#24262A] rounded-full">
+          <button
+            class="w-full text-[10px] md:text-base h-8 md:h-14 text-white bg-[#24262A] rounded-full"
+          >
             СПРОБУВАТИ
           </button>
         </div>
@@ -262,7 +281,7 @@ import { Carousel, Slide, Pagination, Navigation } from "vue3-carousel";
     </div>
 
     <!-- user stories -->
-    <div id="stories" class="mb-12 pt-60">
+    <div id="stories" class="mb-12 pt-0 md:pt-60">
       <div class="mb-20 text-white font-medium text-center">
         <div class="text-[50px]">ВІДГУКИ</div>
         <div class="text-[13px]">ТА РЕЗУЛЬТАТИ КЛІЄНТІВ</div>
@@ -298,17 +317,35 @@ import { Carousel, Slide, Pagination, Navigation } from "vue3-carousel";
       </div>
     </div>
     <div
-      class="mb-28 flex flex-col md:flex-row items-center mx-auto max-w-7xl gap-11"
+      class="hidden md:flex mb-28 justify-between items-center mx-auto max-w-7xl gap-11"
     >
-      <img class="w-[45%]" src="/story_1_1.png" alt="" />
-      <img class="w-[45%]" src="/story_2_1.png" alt="" />
+      <img class="w-[50%]" src="/story_1_1.png" alt="" />
+      <img class="w-[50%]" src="/story_2_1.png" alt="" />
     </div>
+    <div class="text-[15px] font-medium text-center text-white">
+      РЕЗУЛЬТАТИ КЛІЄНТІВ
+    </div>
+    <Carousel
+      class="mb-28 block md:hidden"
+      :items-to-show="1"
+      :wrapAround="true"
+    >
+      <Slide key="1">
+        <img src="/story_1_1.png" alt="" />
+      </Slide>
+      <Slide key="2">
+        <img src="/story_2_1.png" alt="" />
+      </Slide>
+      <template #addons>
+        <pagination />
+      </template>
+    </Carousel>
     <div class="mb-7 text-xl text-white text-center">
       МИ ПРОДУМАЛИ все до дрібних ДЕТАЛЕЙ, щоб ваші ЗАЙНЯТТЯ приносили не тільки
       результат, але й задоволення
     </div>
     <button
-      class="mb-44 block w-[340px] mx-auto h-12 bg-white text-black rounded-full"
+      class="mb-44 block w-full max-w-[340px] mx-auto h-12 bg-white text-black rounded-full"
     >
       стати клієнтом</button
     >.
@@ -316,54 +353,37 @@ import { Carousel, Slide, Pagination, Navigation } from "vue3-carousel";
 </template>
 
 <style lang="postcss" scoped>
-.carousel__item {
-  min-height: 200px;
-  width: 100%;
-  background-color: var(--vc-clr-primary);
-  color: var(--vc-clr-white);
-  font-size: 20px;
-  border-radius: 8px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
 .carousel__slide {
-  padding: 10px;
-}
-
-.carousel__prev,
-.carousel__next {
-  box-sizing: content-box;
-  border: 5px solid white;
+  padding-top: 120px;
 }
 #benifits {
-  .benifit {
-    @apply h-[380px] w-1/3 px-6 relative rounded-[44px] bg-white flex flex-col items-center;
+}
+.benifit {
+  @apply h-[380px] md:w-1/3 px-6 relative rounded-[44px] bg-white flex flex-col items-center;
 
-    img {
-      @apply absolute bottom-0 left-0 right-0 mx-auto;
-    }
-    .title {
-      @apply text-[#18191C] mb-2 text-xl  font-bold;
-    }
-    .desc {
-      @apply text-[#18191C] text-sm;
-    }
+  img {
+    @apply absolute bottom-0 left-0 right-0 mx-auto;
+  }
+  .title {
+    @apply text-[#18191C] mb-2 text-xl  font-bold;
+  }
+  .desc {
+    @apply text-[#18191C] text-sm;
   }
 }
 .pricing_card {
-  @apply w-[395px] h-[363px] rounded-[44px] bg-[#24262A] p-6;
+  @apply w-[237px] h-[218px] md:w-[395px] md:h-[363px] rounded-[44px] bg-[#24262A] p-6;
   @apply flex flex-col justify-between items-center;
   > .heading {
-    @apply text-white text-xl font-medium;
+    @apply text-white text-xs md:text-xl md:mt-4 font-medium;
   }
   .wrapper {
     @apply w-full;
     .price {
-      @apply text-[50px] font-semibold text-white text-center mb-4;
+      @apply text-[40px] md:text-[50px] font-semibold text-white text-center mb-4;
     }
     > button {
-      @apply w-full h-14 text-white border rounded-full border-[#E5C140];
+      @apply w-full h-8 md:h-12 text-white border rounded-full border-[#E5C140];
       @apply flex justify-center items-center;
     }
     > .yellow {
