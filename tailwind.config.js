@@ -6,6 +6,9 @@ export default {
       colors: {
         primary: "#18191C",
       },
+      fontFamily: {
+        montserrat: ["Montserrat", "sans-serif"],
+      },
     },
   },
   plugins: [],
