@@ -38,21 +38,27 @@ const showMobileMenu = ref(false);
         <a href="#">ПРО МЕНЕ</a>
       </div>
       <div class="flex gap-x-4">
-        <div
-          class="w-8 h-8 bg-white flex justify-center items-center rounded-full"
+        <a
+          target="_blank"
+          href="https://instagram.com/maximheleveria?igshid=OGQ5ZDc2ODk2ZA=="
+          class="w-8 h-8 !p-0 bg-white hover:!bg-white flex justify-center items-center !rounded-full"
         >
           <Instragram />
-        </div>
-        <div
-          class="w-8 h-8 bg-white flex justify-center items-center rounded-full"
+        </a>
+        <a
+          target="_blank"
+          href="https://youtube.com/@Maximgeleverya?si=2r7xDKUddqcMY0Bh"
+          class="w-8 h-8 !p-0 bg-white hover:!bg-white flex justify-center items-center !rounded-full"
         >
           <Youtube />
-        </div>
-        <div
-          class="w-8 h-8 bg-white flex justify-center items-center rounded-full"
+        </a>
+        <a
+          target="_blank"
+          href="https://www.tiktok.com/@gelevan01?_t=8hp0ZZNfOTO&_r=1"
+          class="w-8 h-8 !p-0 bg-white hover:!bg-white flex justify-center items-center !rounded-full"
         >
           <Tiktok />
-        </div>
+        </a>
       </div>
     </div>
   </div>
