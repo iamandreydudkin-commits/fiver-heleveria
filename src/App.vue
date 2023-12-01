@@ -83,7 +83,7 @@ import { Carousel, Slide, Pagination, Navigation } from "vue3-carousel";
           <template #slides>
             <slide :key="1">
               <div class="benifit">
-                <div class="relative h-[50%] w-full mb-4">
+                <div class="img_wrapper">
                   <img src="/benifit_1.png" alt="" />
                 </div>
                 <div class="title">ГАРНА ФІЗИЧНА ФОРМА</div>
@@ -102,7 +102,7 @@ import { Carousel, Slide, Pagination, Navigation } from "vue3-carousel";
             </slide>
             <Slide :key="2">
               <div class="benifit">
-                <div class="relative h-[50%] w-full mb-4">
+                <div class="img_wrapper">
                   <img src="/benifit_2.png" alt="" />
                 </div>
                 <div class="title">РІВЕНЬ ЩАСТЯ</div>
@@ -121,7 +121,7 @@ import { Carousel, Slide, Pagination, Navigation } from "vue3-carousel";
             </Slide>
             <Slide :key="3">
               <div class="benifit">
-                <div class="relative h-[50%] w-full mb-4">
+                <div class="img_wrapper">
                   <img src="/benifit_3.png" alt="" />
                 </div>
                 <div class="title">ЗДОРОВЕ ХАРЧУВАННЯ</div>
@@ -150,7 +150,7 @@ import { Carousel, Slide, Pagination, Navigation } from "vue3-carousel";
       <div class="hidden md:block pt-40 mx-auto max-w-7xl">
         <div id="benifits" class="flex justify-center gap-x-9">
           <div class="benifit">
-            <div class="relative h-[50%] w-full mb-4">
+            <div class="img_wrapper">
               <img src="/benifit_1.png" alt="" />
             </div>
             <div class="title">ГАРНА ФІЗИЧНА ФОРМА</div>
@@ -168,7 +168,7 @@ import { Carousel, Slide, Pagination, Navigation } from "vue3-carousel";
           </div>
 
           <div class="benifit">
-            <div class="relative h-[50%] w-full mb-4">
+            <div class="img_wrapper">
               <img src="/benifit_2.png" alt="" />
             </div>
             <div class="title">РІВЕНЬ ЩАСТЯ</div>
@@ -185,7 +185,7 @@ import { Carousel, Slide, Pagination, Navigation } from "vue3-carousel";
             />
           </div>
           <div class="benifit">
-            <div class="relative h-[50%] w-full mb-4">
+            <div class="img_wrapper">
               <img src="/benifit_3.png" alt="" />
             </div>
             <div class="title">ЗДОРОВЕ ХАРЧУВАННЯ</div>
@@ -360,15 +360,17 @@ import { Carousel, Slide, Pagination, Navigation } from "vue3-carousel";
 }
 .benifit {
   @apply h-[380px] md:w-1/3 px-6 relative rounded-[44px] bg-white flex flex-col items-center;
-
-  img {
-    @apply absolute bottom-0 left-0 right-0 mx-auto;
+  > .img_wrapper {
+    @apply relative h-[50%] w-full mb-4;
+    > img {
+      @apply absolute bottom-0 left-0 right-0 mx-auto;
+    }
   }
   .title {
     @apply text-[#18191C] mb-2 text-xl  font-bold;
   }
   .desc {
-    @apply text-[#18191C] text-sm;
+    @apply text-[#18191C] text-[13px] leading-4;
   }
 }
 .pricing_card {
