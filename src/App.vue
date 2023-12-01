@@ -255,7 +255,7 @@ import { Carousel, Slide, Pagination, Navigation } from "vue3-carousel";
           </div>
         </div>
         <div
-          class="mx-auto w-[238px] h-[180px] md:w-[395px] md:h-[363px] text-center rounded-[44px] bg-[#E5C140] p-3 md:p-6"
+          class="mx-auto w-[238px] h-[180px] md:w-[395px] md:h-[330px] text-center rounded-[44px] bg-[#E5C140] p-3 md:p-6"
         >
           <div class="md:mb-2 text-[10px] md:text-xl font-medium">
             ПЕРШЕ ТРЕНУВАННЯ
@@ -264,11 +264,13 @@ import { Carousel, Slide, Pagination, Navigation } from "vue3-carousel";
             БЕЗКОШТОВНЕ
           </div>
           <input
-            class="mb-1 md:mb-3 w-full bg-[#24262A4D] rounded-full h-6 md:h-10"
+            class="mb-1 placeholder:text-white text-[13px] text-center text-white md:mb-3 w-full bg-[#24262A4D] rounded-full h-6 md:h-10"
+            placeholder="ІМ’я"
             type="text"
           />
           <input
-            class="mb-4 md:mb-8 w-full bg-[#24262A4D] rounded-full h-6 md:h-10"
+            class="mb-4 placeholder:text-white text-[13px] text-center text-white md:mb-8 w-full bg-[#24262A4D] rounded-full h-6 md:h-10"
+            placeholder="GMAIL"
             type="text"
           />
           <button
