@@ -7,7 +7,7 @@ export default {
         primary: "#18191C",
       },
       fontFamily: {
-        montserrat: ["Montserrat", "sans-serif"],
+        montserrat: ["Montserrat"],
       },
     },
   },
