@@ -220,7 +220,7 @@ import { Carousel, Slide, Pagination, Navigation } from "vue3-carousel";
           <div class="pricing_card">
             <div class="heading">ТРЕНУВАННЯ ВДОМА</div>
             <div class="wrapper">
-              <div class="price">350 ₴</div>
+              <div class="price">450 ₴</div>
               <button>детальніше</button>
               <button class="yellow">придбати</button>
             </div>
@@ -228,7 +228,7 @@ import { Carousel, Slide, Pagination, Navigation } from "vue3-carousel";
           <div class="pricing_card">
             <div class="heading">ТРЕНУВАННЯ В ЗАЛІ</div>
             <div class="wrapper">
-              <div class="price">350 ₴</div>
+              <div class="price">450 ₴</div>
               <button>детальніше</button>
               <button class="yellow">придбати</button>
             </div>
@@ -240,7 +240,7 @@ import { Carousel, Slide, Pagination, Navigation } from "vue3-carousel";
           <div class="pricing_card">
             <div class="heading">ПЛАН ХАРЧУВАННЯ</div>
             <div class="wrapper">
-              <div class="price">350 ₴</div>
+              <div class="price">550 ₴</div>
               <button>детальніше</button>
               <button class="yellow">придбати</button>
             </div>
@@ -248,33 +248,37 @@ import { Carousel, Slide, Pagination, Navigation } from "vue3-carousel";
           <div class="pricing_card">
             <div class="heading">ПЕРСОНАЛЬНЕ ВЕДЕННЯ</div>
             <div class="wrapper">
-              <div class="price">350 ₴</div>
+              <div class="price">3500 ₴</div>
               <button>детальніше</button>
               <button class="yellow">придбати</button>
             </div>
           </div>
         </div>
         <div
-          class="mx-auto w-[238px] h-[180px] md:w-[395px] md:h-[330px] text-center rounded-[44px] bg-[#E5C140] p-3 md:p-6"
+          class="mx-auto w-[238px] h-[180px] md:w-[395px] md:h-[314px] text-center rounded-[44px] bg-[#E5C140] p-3 md:p-6"
         >
-          <div class="md:mb-2 text-[10px] md:text-xl font-medium">
+          <div
+            class="md:mb-0 text-[10px] md:text-xl tracking-tighter leading-[0px] font-medium"
+          >
             ПЕРШЕ ТРЕНУВАННЯ
           </div>
-          <div class="md:mb-2 text-[25px] md:text-[40px] font-medium">
+          <div
+            class="md:mb-5 text-[25px] md:text-[40px] tracking-[-2px] leading-10 font-medium"
+          >
             БЕЗКОШТОВНЕ
           </div>
           <input
-            class="mb-1 placeholder:text-white text-[13px] text-center text-white md:mb-3 w-full bg-[#24262A4D] rounded-full h-6 md:h-10"
+            class="mb-3 md:mb-3 placeholder:text-white text-[13px] tracking-[0.78px] font-medium text-center text-white w-full bg-[#24262A4D] rounded-full h-6 md:h-10 uppercase"
             placeholder="ІМ’я"
             type="text"
           />
           <input
-            class="mb-4 placeholder:text-white text-[13px] text-center text-white md:mb-8 w-full bg-[#24262A4D] rounded-full h-6 md:h-10"
-            placeholder="GMAIL"
+            class="mb-4 md:mb-8 placeholder:text-white text-[13px] tracking-[0.78px] font-medium text-center text-white w-full bg-[#24262A4D] rounded-full h-6 md:h-10 uppercase"
+            placeholder="TELEGRAM"
             type="text"
           />
           <button
-            class="w-full text-[10px] md:text-base h-8 md:h-14 text-white bg-[#24262A] rounded-full"
+            class="w-full text-[10px] md:text-[13px] tracking-[0.78px] font-medium h-[56px] md:h-14 text-white bg-[#24262A] rounded-full"
           >
             СПРОБУВАТИ
           </button>
@@ -324,9 +328,7 @@ import { Carousel, Slide, Pagination, Navigation } from "vue3-carousel";
       <img class="w-[50%]" src="/story_1_1.png" alt="" />
       <img class="w-[50%]" src="/story_2_1.png" alt="" />
     </div>
-    <div class="text-[15px] font-medium text-center text-white">
-      РЕЗУЛЬТАТИ КЛІЄНТІВ
-    </div>
+
     <Carousel
       class="mb-28 block md:hidden"
       :items-to-show="1"
@@ -342,12 +344,15 @@ import { Carousel, Slide, Pagination, Navigation } from "vue3-carousel";
         <pagination />
       </template>
     </Carousel>
-    <div class="mb-7 text-xl text-white text-center">
+    <!-- <div class="text-[15px] font-medium text-center text-white">
+      РЕЗУЛЬТАТИ КЛІЄНТІВ
+    </div> -->
+    <div class="mb-7 md:w-1/2 mx-auto text-xl text-white uppercase text-center">
       МИ ПРОДУМАЛИ все до дрібних ДЕТАЛЕЙ, щоб ваші ЗАЙНЯТТЯ приносили не тільки
       результат, але й задоволення
     </div>
     <button
-      class="mb-44 block w-full max-w-[340px] mx-auto h-12 bg-white text-black rounded-full"
+      class="mb-44 text-[13px] font-medium uppercase block w-full max-w-[340px] mx-auto h-[56px] bg-white text-black rounded-full"
     >
       стати клієнтом</button
     >.
@@ -361,7 +366,7 @@ import { Carousel, Slide, Pagination, Navigation } from "vue3-carousel";
 #benifits {
 }
 .benifit {
-  @apply h-[380px] md:w-1/3 px-6 relative rounded-[44px] bg-white flex flex-col items-center;
+  @apply h-[380px] md:w-[336px] px-6 relative rounded-[44px] bg-white flex flex-col items-center;
   > .img_wrapper {
     @apply relative h-[50%] w-full mb-4;
     > img {
@@ -372,7 +377,7 @@ import { Carousel, Slide, Pagination, Navigation } from "vue3-carousel";
     @apply text-[#18191C] mb-2 text-xl  font-bold;
   }
   .desc {
-    @apply text-[#18191C] text-[13px] leading-4;
+    @apply lowercase text-[#18191C] text-[13px] leading-4 tracking-wider;
   }
 }
 .pricing_card {
@@ -388,7 +393,7 @@ import { Carousel, Slide, Pagination, Navigation } from "vue3-carousel";
     }
     > button {
       @apply w-full h-8 md:h-12 text-white border rounded-full border-[#E5C140];
-      @apply flex justify-center items-center;
+      @apply uppercase flex justify-center items-center;
     }
     > .yellow {
       @apply mt-3 text-black bg-[#E5C140];
@@ -415,10 +420,10 @@ import { Carousel, Slide, Pagination, Navigation } from "vue3-carousel";
       }
     }
     > .desc {
-      @apply mb-11 text-[13px] font-[300];
+      @apply mb-11 text-[13px]  font-light leading-4 tracking-wider normal-case;
     }
     > .username {
-      @apply text-center mb-3 text-[13px] font-[300];
+      @apply text-center mb-3 text-[13px] font-light normal-case;
     }
   }
 }
